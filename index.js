@@ -5,7 +5,7 @@ const jwt = require('express-jwt')
 
 // Utilities
 const handler = require('./lib/handler')
-const handleAgreements = require('./lib/handler-agreements')
+const handleLogs = require('./lib/handler-logs')
 const config = require('./config')
 const handleUnauthorized = require('./lib/handle-unauthorized')
 
@@ -21,10 +21,10 @@ router.use(handleUnauthorized)
 
 // ROUTES
 router.get('/', handler.getFrontpage)
-router.put('/agreements', handleAgreements.addAgreement)
-router.get('/agreements/:id', handleAgreements.getAgreement)
-router.post('/agreements/search', handleAgreements.searchAgreements)
-router.post('/agreements/:id', handleAgreements.updateAgreement)
+router.put('/agreements', handleLogs.addAgreement)
+router.get('/agreements/:id', handleLogs.getAgreement)
+router.post('/agreements/search', handleLogs.searchAgreements)
+router.post('/agreements/:id', handleLogs.updateAgreement)
 
 module.exports = (request, response) => {
   router(request, response, finalhandler(request, response))
