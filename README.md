@@ -30,6 +30,14 @@ Get a specific agreement
 $ http GET https://logs.service.io/agreements/5ac770926ae9e948ebc0bb47 'Authorization: Bearer <INSERT TOKEN>'
 ```
 
+### ```GET /agreements/parts/:partId```
+
+Get all parts for an agreement using the partId
+
+```bash
+$ http GET https://logs.service.io/agreements/parts/42405aab-466e-4459-ac17-7f2c96f4ec19 'Authorization: Bearer <INSERT TOKEN>'
+```
+
 ### ```POST /agreements/:id```
 
 Updates agreement

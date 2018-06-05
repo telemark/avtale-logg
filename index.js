@@ -23,6 +23,7 @@ router.use(handleUnauthorized)
 router.get('/', handler.getFrontpage)
 router.put('/agreements', handleLogs.addAgreement)
 router.get('/agreements/:id', handleLogs.getAgreement)
+router.get('/agreements/parts/:id', handleLogs.getAgreementParts)
 router.post('/agreements/search', handleLogs.searchAgreements)
 router.post('/agreements/:id', handleLogs.updateAgreement)
 
