@@ -39,16 +39,6 @@
     "url": "https://github.com/telemark/avtale-logg/issues"
   },
   "homepage": "https://github.com/telemark/avtale-logg#readme",
-  "now": {
-    "alias": [
-      "log.avtale.service.t-fk.no"
-    ],
-    "type": "npm",
-    "dotenv": "production.env",
-    "engines": {
-      "node": ">=10.0.0"
-    }
-  },
   "devDependencies": {
     "ava": "0.25.0",
     "axios": "0.18.0",
