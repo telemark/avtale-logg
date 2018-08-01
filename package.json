@@ -11,10 +11,10 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=10.3.0"
+    "node": ">=10.7.0"
   },
   "scripts": {
-    "test": "standard && nsp check && ava",
+    "test": "standard && npm audit && ava",
     "test-offline": "standard && ava",
     "coverage": "nyc ava",
     "coveralls": "nyc ava && nyc report --reporter=lcov && cat coverage/lcov.info | coveralls",
@@ -46,14 +46,13 @@
     "type": "npm",
     "dotenv": "production.env",
     "engines": {
-      "node": "10.4.0"
+      "node": ">=10.0.0"
     }
   },
   "devDependencies": {
     "ava": "0.25.0",
     "axios": "0.18.0",
     "coveralls": "3.0.2",
-    "nsp": "3.2.1",
     "micro-dev": "3.0.0",
     "nyc": "12.0.2",
     "standard": "11.0.1",
