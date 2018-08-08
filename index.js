@@ -17,7 +17,7 @@ const router = Router()
 router.use(cors())
 
 // JWT
-router.use(jwt({secret: config.JWT_SECRET}).unless({path: ['/', '/stats/total', /\/stats\/total/i, '/stats/types', '/stats/read']}))
+router.use(jwt({secret: config.JWT_SECRET}).unless({path: ['/', '/stats/total', /\/stats\/total/i, '/stats/types', '/stats/read', '/stats/agreements']}))
 router.use(handleUnauthorized)
 
 // ROUTES
@@ -31,6 +31,7 @@ router.get('/stats/total', handleStats.total)
 router.get('/stats/total/:status', handleStats.total)
 router.get('/stats/types', handleStats.types)
 router.get('/stats/read', handleStats.read)
+router.get('/stats/agreements', handleStats.agreements)
 
 module.exports = (request, response) => {
   router(request, response, finalhandler(request, response))

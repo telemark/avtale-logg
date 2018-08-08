@@ -84,6 +84,14 @@ Get total amount of different read statuses
 $ http GET https://logs.service.io/stats/read
 ```
 
+### ```GET /stats/agreements````
+
+Get total amount of different signed statuses grouped by agreementIds
+
+```bash
+$ http GET https://logs.service.io/stats/agreements
+```
+
 ## Deployment - ZEIT/Now
 
 Change content of [production.env](production.env) to match your environment.
