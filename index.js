@@ -6,6 +6,7 @@ const jwt = require('express-jwt')
 // Utilities
 const handler = require('./lib/handler')
 const handleLogs = require('./lib/handler-logs')
+const handleStats = require('./lib/handler-stats')
 const config = require('./config')
 const handleUnauthorized = require('./lib/handle-unauthorized')
 
@@ -16,7 +17,7 @@ const router = Router()
 router.use(cors())
 
 // JWT
-router.use(jwt({secret: config.JWT_SECRET}).unless({path: ['/']}))
+router.use(jwt({secret: config.JWT_SECRET}).unless({path: ['/', '/stats/total', /\/stats\/total/i, '/stats/types', '/stats/read']}))
 router.use(handleUnauthorized)
 
 // ROUTES
@@ -26,6 +27,10 @@ router.get('/agreements/:id', handleLogs.getAgreement)
 router.get('/agreements/parts/:id', handleLogs.getAgreementParts)
 router.post('/agreements/search', handleLogs.searchAgreements)
 router.post('/agreements/:id', handleLogs.updateAgreement)
+router.get('/stats/total', handleStats.total)
+router.get('/stats/total/:status', handleStats.total)
+router.get('/stats/types', handleStats.types)
+router.get('/stats/read', handleStats.read)
 
 module.exports = (request, response) => {
   router(request, response, finalhandler(request, response))

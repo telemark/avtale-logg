@@ -52,6 +52,37 @@ Search agreements
 ```bash
 $ http POST https://logs.service.io/agreements/search status=signed 'Authorization: Bearer <INSERT TOKEN>'
 ```
+### ```GET /stats/total````
+
+Get total amount of agreements
+
+```bash
+$ http GET https://logs.service.io/stats/total
+```
+
+### ```GET /stats/total/:status````
+
+Get total amount of agreements with a given status
+
+```bash
+$ http GET https://logs.service.io/stats/total/signed
+```
+
+### ```GET /stats/types````
+
+Get total amount of different agreement types
+
+```bash
+$ http GET https://logs.service.io/stats/types
+```
+
+### ```GET /stats/read````
+
+Get total amount of different read statuses
+
+```bash
+$ http GET https://logs.service.io/stats/read
+```
 
 ## Deployment - ZEIT/Now
 
