@@ -52,7 +52,7 @@ Search agreements
 ```bash
 $ http POST https://logs.service.io/agreements/search status=signed 'Authorization: Bearer <INSERT TOKEN>'
 ```
-### ```GET /stats/total````
+### ```GET /stats/total```
 
 Get total amount of agreements
 
@@ -60,7 +60,7 @@ Get total amount of agreements
 $ http GET https://logs.service.io/stats/total
 ```
 
-### ```GET /stats/total/:status````
+### ```GET /stats/total/:status```
 
 Get total amount of agreements with a given status
 
@@ -68,7 +68,15 @@ Get total amount of agreements with a given status
 $ http GET https://logs.service.io/stats/total/signed
 ```
 
-### ```GET /stats/types````
+### ```GET /stats/status```
+
+Get total amount of different agreement statuses
+
+```bash
+$ http GET https://logs.service.io/stats/status
+```
+
+### ```GET /stats/types```
 
 Get total amount of different agreement types
 
@@ -76,7 +84,7 @@ Get total amount of different agreement types
 $ http GET https://logs.service.io/stats/types
 ```
 
-### ```GET /stats/read````
+### ```GET /stats/read```
 
 Get total amount of different read statuses
 
@@ -84,7 +92,7 @@ Get total amount of different read statuses
 $ http GET https://logs.service.io/stats/read
 ```
 
-### ```GET /stats/agreements````
+### ```GET /stats/agreements```
 
 Get total amount of different signed statuses grouped by agreementIds
 
