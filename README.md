@@ -60,12 +60,24 @@ Get total amount of agreements
 $ http GET https://logs.service.io/stats/total
 ```
 
+Filter by agreementType
+
+```bash
+$ http GET https://logs.service.io/stats/total?agreementType=elevpc
+```
+
 ### ```GET /stats/total/:status```
 
 Get total amount of agreements with a given status
 
 ```bash
 $ http GET https://logs.service.io/stats/total/signed
+```
+
+Filter by agreementType
+
+```bash
+$ http GET https://logs.service.io/stats/total/signed?agreementType=elevpc
 ```
 
 ### ```GET /stats/status```
@@ -76,12 +88,24 @@ Get total amount of different agreement statuses
 $ http GET https://logs.service.io/stats/status
 ```
 
+Filter by agreementType
+
+```bash
+$ http GET https://logs.service.io/stats/status?agreementType=elevpc
+```
+
 ### ```GET /stats/types```
 
 Get total amount of different agreement types
 
 ```bash
 $ http GET https://logs.service.io/stats/types
+```
+
+Filter by agreementType
+
+```bash
+$ http GET https://logs.service.io/stats/types?agreementType=elevpc
 ```
 
 ### ```GET /stats/read```
@@ -92,12 +116,24 @@ Get total amount of different read statuses
 $ http GET https://logs.service.io/stats/read
 ```
 
+Filter by agreementType
+
+```bash
+$ http GET https://logs.service.io/stats/read?agreementType=elevpc
+```
+
 ### ```GET /stats/agreements```
 
 Get total amount of different signed statuses grouped by agreementIds
 
 ```bash
 $ http GET https://logs.service.io/stats/agreements
+```
+
+Filter by agreementType
+
+```bash
+$ http GET https://logs.service.io/stats/agreements?agreementType=elevpc
 ```
 
 ## Deployment - ZEIT/Now
