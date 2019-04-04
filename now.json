@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "avtale-logg",
+  "context": "telemark",
   "alias": [
     "log.avtale.service.t-fk.no"
   ],

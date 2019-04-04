@@ -138,9 +138,7 @@ $ http GET https://logs.service.io/stats/agreements?agreementType=elevpc
 
 ## Deployment - ZEIT/Now
 
-Change content of [production.env](production.env) to match your environment.
-
-Change content of now:alias in [package.json](package.json) to match your domains.
+Change content of [now.json](now.json) to match your environment.
 
 Deploy service.
 
