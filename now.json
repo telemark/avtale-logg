@@ -1,17 +1,21 @@
 {
+  "version": 2,
   "name": "avtale-logg",
   "alias": [
     "log.avtale.service.t-fk.no"
   ],
-  "type": "npm",
-  "dotenv": "production.env",
-  "engines": {
-    "node": ">=10.7.0"
+  "env": {
+    "NODE_ENV": "production",
+    "DB": "@avtaler-db-connection",
+    "JWT_SECRET": "@avtaler-system-jwt",
+    "PAPERTRAIL_HOSTNAME": "avtaler",
+    "PAPERTRAIL_HOST": "@tfk-papertrail-host",
+    "PAPERTRAIL_PORT": "@tfk-papertrail-port"
   },
-  "scale": {
-    "bru1": {
-      "min": 1,
-      "max": 1
-    }
-  }
+  "builds": [
+    { "src": "/index.js", "use": "@now/node" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.js" }
+  ]
 }
